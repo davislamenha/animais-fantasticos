@@ -1,0 +1,296 @@
+/* === CONTAINER ===*/
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 120px minmax(300px, 800px) 1fr;
+}
+.grid-section {
+  grid-column: 2/4;
+  width: 100%;
+  padding: 2rem 1rem 4rem 1rem;
+  display: grid;
+  grid-template-columns: 70px 300px 1fr;
+  gap: 2rem;
+}
+.grid-section h1 {
+  grid-column: 1/4;
+  text-transform: uppercase;
+}
+
+/* ===== MENU ===== */
+.menu {
+  grid-column: 3/5;
+  margin-block: 3.2rem;
+  background: #fb5;
+  padding: 1rem;
+}
+.menu ul {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.menu li a {
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: #222;
+  padding: 1rem;
+}
+
+/* ===== ANIMAIS ===== */
+
+.animais-lista {
+  height: 600px;
+  overflow-y: scroll;
+  grid-column: 2;
+}
+.js .animais-lista li {
+  cursor: pointer;
+  filter: grayscale(100%);
+  transition: 0.3s;
+}
+.js .animais-lista li:hover {
+  filter: grayscale(0%);
+}
+.animais-lista::-webkit-scrollbar {
+  width: 18px;
+}
+.animais-lista::-webkit-scrollbar-thumb {
+  background: #fb5;
+  border-left: 4px solid #faf6ed;
+  border-right: 4px solid #faf6ed;
+}
+.animais-lista::-webkit-scrollbar-track {
+  background: #faf6ed;
+}
+.js .animais-info section {
+  display: none;
+}
+.js .animais-info section.ativo {
+  display: block;
+}
+.animais-info h2::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 10px;
+  margin-right: 10px;
+  background: #fb5;
+}
+.animais-info h2 {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: #e54;
+  margin-bottom: 1rem;
+}
+.animais-info p {
+  font: 400 1.2rem/1.2 Helvetica, arial;
+  margin-bottom: 1rem;
+}
+
+/* ===== FAQ ===== */
+.faq h1 {
+  grid-column: 1/4;
+}
+.faq-lista {
+  grid-column: 2/4;
+}
+.faq-lista dt::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 10px;
+  margin-right: 10px;
+  background: #fb5;
+}
+
+.faq-lista dt {
+  display: flex;
+  align-items: center;
+  margin-block: 2rem 0.5rem;
+  color: #e54;
+}
+.faq-lista dd {
+  font: 400 1.2rem/1.2 Helvetica, arial;
+  margin-bottom: 1.5rem;
+  margin-left: 2rem;
+}
+
+.js .faq-lista dt {
+  cursor: pointer;
+}
+.js .faq-lista dt::after {
+  content: "▼";
+  display: inline-block;
+  margin-left: 1rem;
+  transition: 0.5s;
+}
+.js .faq-lista dt.ativo::after {
+  transform: rotate(180deg);
+}
+.js .faq-lista dd {
+  display: none;
+}
+.js .faq-lista dd.ativo {
+  display: block;
+  animation: show-down 0.5s forwards;
+}
+
+/* ===== NUMEROS ===== */
+.numeros-grid {
+  grid-column: 2/4;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  padding-top: 2rem;
+}
+.numero-animal h3 {
+  font: 400 2.4rem/1 "Playfair Display SC", georgia;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+.numero-animal span {
+  font: 600 2rem/1.6 "IBM Plex Mono", monospace;
+  color: #e54;
+}
+
+/* ===== CONTATO ===== */
+.mapa {
+  grid-column: 2;
+}
+.dados li::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: #fb5;
+}
+.dados li {
+  display: flex;
+  align-items: center;
+  grid-column: 3;
+  font: 400 1.2rem/1.8 Helvetica, arial;
+}
+.btc-preco {
+  background: #39ff14;
+  font-weight: 600;
+  padding: 0.1rem 0.5rem;
+  border-radius: 5px;
+  margin-inline: 0.5rem;
+}
+.dados a {
+  color: #e54;
+}
+.js .dados [data-semana]::after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-left: 5px;
+  border: 1px solid #000;
+  background: #ff0000;
+}
+.js .dados [data-semana].ativo::after {
+  background: #39ff14;
+}
+
+/* ===== FOOTER ===== */
+.copy {
+  grid-column: 3/5;
+  margin-bottom: 2rem;
+  background: #fb5;
+}
+.copy p {
+  padding: 2rem;
+}
+
+/* ===== ANIMAÇÕES ===== */
+
+@keyframes show-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes show-down {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.js .show-down {
+  animation: show-down 0.5s forwards;
+}
+@keyframes show-right {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.js .show-right {
+  animation: show-right 0.5s forwards;
+}
+/* .js section {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: 0.3s ease-in;
+}
+.js section.ativo {
+  opacity: 1;
+  transform: translateX(0);
+} */
+
+@media (max-width: 700px) {
+  .grid-container,
+  .numeros-grid {
+    grid-template-columns: 1fr;
+  }
+  body h1 {
+    margin-bottom: 1.2rem;
+  }
+  .menu,
+  .grid-section,
+  .copy {
+    grid-column: 1;
+  }
+  .grid-section {
+    grid-template-columns: 100px 1fr;
+    padding: 1rem 1rem 2rem 1rem;
+    gap: 10px;
+  }
+  .faq-lista,
+  .dados,
+  .mapa {
+    grid-column: 1/3;
+  }
+  .faq-lista dt {
+    margin-top: 0px;
+  }
+  .numero-animal h3 {
+    font-size: 1.8rem;
+  }
+  .numero-animal span {
+    font-size: 1.4rem;
+  }
+  .menu {
+    margin-top: 0px;
+  }
+  .copy {
+    margin-bottom: 0px;
+  }
+}

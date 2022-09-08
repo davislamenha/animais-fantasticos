@@ -1,0 +1,27 @@
+/* === RESET === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 62.5%;
+  color: #222;
+  -webkit-font-smoothing: antialiased;
+}
+ul {
+  list-style: none;
+}
+a {
+  display: block;
+  text-decoration: none;
+}
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+}

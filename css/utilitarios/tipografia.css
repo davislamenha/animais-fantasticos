@@ -1,0 +1,31 @@
+/* === IBM Plex === */
+.font-20 {
+  font: 400 2rem "IBM Plex Mono", monospace;
+}
+.font-16 {
+  font: 400 1.6rem/1.6 "IBM Plex Mono", monospace;
+}
+.font-12 {
+  font: 400 1.2rem/1.2 "IBM Plex Mono", monospace;
+}
+
+/* === Titulo === */
+.titulo {
+  font: 400 7.2rem/1 "Playfair Display SC", georgia;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+@media (max-width: 700px) {
+  .titulo {
+    font-size: 4rem;
+  }
+  .font-16 {
+    font-size: 1.2rem;
+  }
+  .font-12 {
+    font-size: 1rem;
+  }
+}
