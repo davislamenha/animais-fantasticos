@@ -23,5 +23,6 @@ export default class Accordion {
       this.toggleAccordion(this.faqPerguntas[0]);
       this.addAccordionList();
     }
+    return this;
   }
 }
