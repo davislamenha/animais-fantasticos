@@ -1,6 +1,8 @@
 import AnimaNumeros from "./anima-numeros.js";
 
 export default function animaisApi(url, target) {
+  const elementTarget = document.querySelector(target);
+
   // cria a div com o total de animais
   function createAnimal(especie, quantidade) {
     const div = document.createElement("div");
@@ -12,7 +14,7 @@ export default function animaisApi(url, target) {
   // preenche cada animal no dom
   function preencherAnimais(animal) {
     const div = createAnimal(animal.especie, animal.quantidade);
-    target.appendChild(div);
+    elementTarget.appendChild(div);
   }
 
   // anima os números da cada animal
