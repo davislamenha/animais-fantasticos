@@ -4,7 +4,7 @@ import initMenuDropdown from "./modules/menu-dropdown.js";
 import initMenuMobile from "./modules/menu-mobile.js";
 import initFuncionamento from "./modules/funcionamento.js";
 
-import initBitcoinApi from "./modules/bitcoin-api.js";
+import bitcoinApi from "./modules/bitcoin-api.js";
 
 import ScrollSuave from "./modules/scroll-suave.js";
 import Accordion from "./modules/accordion.js";
@@ -33,11 +33,10 @@ const tooltip = new Tooltip("[data-tooltip]");
 tooltip.init();
 
 animaisApi("../../animaisapi.json", ".numeros-grid");
+bitcoinApi("https://blockchain.info/ticker", ".btc-preco");
 
 initScrollAnimation();
 
 initMenuDropdown();
 initMenuMobile();
 initFuncionamento();
-
-initBitcoinApi();
