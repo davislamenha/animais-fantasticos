@@ -1,4 +1,4 @@
-import initAnimaNumeros from "./anima-numeros.js";
+import AnimaNumeros from "./anima-numeros.js";
 
 export default function initAnimaisApi() {
   const numerosGrid = document.querySelector(".numeros-grid");
@@ -17,7 +17,12 @@ export default function initAnimaisApi() {
         const div = createAnimal(animal.especie, animal.quantidade);
         numerosGrid.appendChild(div);
       });
-      initAnimaNumeros();
+      const animaNumeros = new AnimaNumeros(
+        "[data-numero]",
+        ".numeros",
+        "ativo"
+      );
+      animaNumeros.init();
     } catch (erro) {
       console.log(erro);
       console.log("Algo de errado não deu certo!");
