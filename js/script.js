@@ -29,7 +29,7 @@ modal.init();
 const tooltip = new Tooltip("[data-tooltip]");
 tooltip.init();
 
-animaisApi("../../animaisapi.json", ".numeros-grid");
+animaisApi("./animaisapi.json", ".numeros-grid");
 bitcoinApi("https://blockchain.info/ticker", ".btc-preco");
 
 const scrollAnima = new ScrollAnimation("[data-anime='scroll']", "ativo");
