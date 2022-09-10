@@ -1,4 +1,3 @@
-import initMenuMobile from "./modules/menu-mobile.js";
 import initFuncionamento from "./modules/funcionamento.js";
 
 import bitcoinApi from "./modules/bitcoin-api.js";
@@ -11,6 +10,7 @@ import Tooltip from "./modules/tooltip.js";
 import animaisApi from "./modules/animais-api.js";
 import ScrollAnimation from "./modules/scroll-animacao.js";
 import MenuDropdown from "./modules/menu-dropdown.js";
+import MenuMobile from "./modules/menu-mobile.js";
 
 const scrollSuave = new ScrollSuave("[data-scroll='smooth'] a[href^='#'");
 scrollSuave.init();
@@ -40,5 +40,7 @@ scrollAnima.init();
 const dropdown = new MenuDropdown("[data-dropdown]");
 dropdown.init();
 
-initMenuMobile();
+const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]');
+menuMobile.init();
+
 initFuncionamento();
