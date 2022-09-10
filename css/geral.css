@@ -245,7 +245,7 @@
 .js .show-right {
   animation: show-right 0.5s forwards;
 }
-/* .js section {
+.js section {
   opacity: 0;
   transform: translateX(-40px);
   transition: 0.3s ease-in;
@@ -253,7 +253,7 @@
 .js section.ativo {
   opacity: 1;
   transform: translateX(0);
-} */
+}
 
 @media (max-width: 700px) {
   .grid-container,
