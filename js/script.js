@@ -1,7 +1,4 @@
-import initFuncionamento from "./modules/funcionamento.js";
-
 import bitcoinApi from "./modules/bitcoin-api.js";
-
 import ScrollSuave from "./modules/scroll-suave.js";
 import Accordion from "./modules/accordion.js";
 import TabNav from "./modules/menu-tab.js";
@@ -11,6 +8,7 @@ import animaisApi from "./modules/animais-api.js";
 import ScrollAnimation from "./modules/scroll-animacao.js";
 import MenuDropdown from "./modules/menu-dropdown.js";
 import MenuMobile from "./modules/menu-mobile.js";
+import Funcionamento from "./modules/funcionamento.js";
 
 const scrollSuave = new ScrollSuave("[data-scroll='smooth'] a[href^='#'");
 scrollSuave.init();
@@ -43,4 +41,5 @@ dropdown.init();
 const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]');
 menuMobile.init();
 
-initFuncionamento();
+const funcionamento = new Funcionamento("[data-semana]");
+funcionamento.init();
