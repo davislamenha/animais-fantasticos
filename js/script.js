@@ -1,4 +1,4 @@
-import initScrollAnimation from "./modules/scroll-animacao.js";
+import ScrollAnimation from "./modules/scroll-animacao.js";
 
 import initMenuDropdown from "./modules/menu-dropdown.js";
 import initMenuMobile from "./modules/menu-mobile.js";
@@ -35,7 +35,8 @@ tooltip.init();
 animaisApi("../../animaisapi.json", ".numeros-grid");
 bitcoinApi("https://blockchain.info/ticker", ".btc-preco");
 
-initScrollAnimation();
+const scrollAnima = new ScrollAnimation("[data-anime='scroll']", "ativo");
+scrollAnima.init();
 
 initMenuDropdown();
 initMenuMobile();
