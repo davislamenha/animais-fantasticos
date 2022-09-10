@@ -1,6 +1,3 @@
-import ScrollAnimation from "./modules/scroll-animacao.js";
-
-import initMenuDropdown from "./modules/menu-dropdown.js";
 import initMenuMobile from "./modules/menu-mobile.js";
 import initFuncionamento from "./modules/funcionamento.js";
 
@@ -12,6 +9,8 @@ import TabNav from "./modules/menu-tab.js";
 import Modal from "./modules/modal.js";
 import Tooltip from "./modules/tooltip.js";
 import animaisApi from "./modules/animais-api.js";
+import ScrollAnimation from "./modules/scroll-animacao.js";
+import MenuDropdown from "./modules/menu-dropdown.js";
 
 const scrollSuave = new ScrollSuave("[data-scroll='smooth'] a[href^='#'");
 scrollSuave.init();
@@ -38,6 +37,8 @@ bitcoinApi("https://blockchain.info/ticker", ".btc-preco");
 const scrollAnima = new ScrollAnimation("[data-anime='scroll']", "ativo");
 scrollAnima.init();
 
-initMenuDropdown();
+const dropdown = new MenuDropdown("[data-dropdown]");
+dropdown.init();
+
 initMenuMobile();
 initFuncionamento();
