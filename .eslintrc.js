@@ -13,5 +13,6 @@ module.exports = {
     "no-param-reassign": 0,
     "import/extensions": 0,
     "no-console": 0,
+    "max-classes-per-file": 0,
   },
 };
