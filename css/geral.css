@@ -29,10 +29,20 @@
   flex-wrap: wrap;
 }
 .menu li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   color: #222;
   padding: 1rem;
+}
+.arrow-black {
+  background: url(../img/arrow-black.svg) no-repeat center center;
+  display: inline-block;
+  width: 8px;
+  height: 10px;
 }
 
 /* ===== ANIMAIS ===== */
@@ -120,13 +130,17 @@
   cursor: pointer;
 }
 .js .faq-lista dt::after {
-  content: "▼";
+  content: "";
   display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: url(../img/arrow-red.svg) no-repeat center center;
   margin-left: 1rem;
   transition: 0.5s;
+  transform: rotate(90deg);
 }
 .js .faq-lista dt.ativo::after {
-  transform: rotate(180deg);
+  transform: rotate(-90deg);
 }
 .js .faq-lista dd {
   display: none;
@@ -269,10 +283,25 @@
     grid-column: 1;
   }
   .grid-section {
-    grid-template-columns: 100px 1fr;
+    grid-template-columns: 1fr;
     padding: 1rem 1rem 2rem 1rem;
     gap: 10px;
   }
+  .arrow-black {
+    background: url(../img/arrow-red.svg) no-repeat center center;
+  }
+  .animais-lista {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    grid-column: 1/-1;
+    margin-block: 1.2rem;
+  }
+  .animais-info {
+    grid-row: 3;
+  }
+
   .faq-lista,
   .dados,
   .mapa {
@@ -281,8 +310,15 @@
   .faq-lista dt {
     margin-top: 0px;
   }
+  .numeros-grid {
+    grid-column: initial;
+
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding-top: 2rem;
+  }
   .numero-animal h3 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
   .numero-animal span {
     font-size: 1.4rem;

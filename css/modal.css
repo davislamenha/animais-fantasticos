@@ -1,6 +1,7 @@
 .modal-container {
   height: 100vh;
   width: 100%;
+
   background: rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
@@ -14,6 +15,8 @@
   display: flex;
 }
 .modal {
+  width: 80vw;
+  max-width: 600px;
   background: #fff;
   padding: 2rem;
   border: 8px solid #fb5;
@@ -27,9 +30,10 @@
   animation: show-down 0.5s forwards;
 }
 .modal .fechar {
-  background: #e54;
-  color: #fff;
-  font: 400 1.4rem/1.4 "IBM Plex Mono", monospace;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  background: #e54 url(../img/fechar.svg) no-repeat center center;
   padding-inline: 0.5rem;
 
   position: absolute;
@@ -43,6 +47,8 @@
   min-width: 300px;
 }
 .modal input {
+  border-radius: none;
+  border: 2px solid #333;
   padding: 0.5rem;
   width: 100%;
   margin-bottom: 1rem;
@@ -54,8 +60,4 @@
   border-radius: 5px;
   color: #fff;
   padding: 0.5rem 1rem;
-}
-.modal button:hover {
-  background: #e43;
-  cursor: pointer;
 }
