@@ -29,3 +29,12 @@
     font-size: 1rem;
   }
 }
+
+@media (max-width: 500px) {
+  .titulo {
+    font-size: 3rem;
+  }
+  .font-20 {
+    font-size: 1.6rem;
+  }
+}
